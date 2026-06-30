@@ -8,7 +8,7 @@ import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <section class="relative w-full min-h-screen flex justify-center py-10 px-4 bg-[#99CAFF] border-2 border-amber-500">
+    <section class="relative w-full min-h-screen flex justify-center py-10 px-4 bg-[#99CAFF]">
       <div class="w-full max-w-7xl lg:w-11/12 bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl border border-white/20 p-6 md:p-10 overflow-hidden">
         <BrowserRouter>
           <Navigation></Navigation>
