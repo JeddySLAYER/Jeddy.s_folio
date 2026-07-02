@@ -1,5 +1,5 @@
 import { div } from "framer-motion/client";
-import profile from "../data/TSS/1772493302278.jpg";
+import profile from "/highlights/TSS/tss2.jpg";
 
 function About() {
   return (
