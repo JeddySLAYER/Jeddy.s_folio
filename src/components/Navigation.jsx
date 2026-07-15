@@ -30,7 +30,7 @@ function Navigation() {
                         Contact
                     </Link>
 
-                    <a onClick={() => setMenuOpen(false)} class="text-xl p-1 text-center rounded-3xl hover:bg-white hover:text-[#99CAFF] hover:translate-x-2 transition-all" href="/resume - Jediel Victorin SAMEY.pdf" download cursor-pointer>
+                    <a onClick={() => setMenuOpen(false)} class="text-xl p-1 text-center rounded-3xl hover:bg-white hover:text-[#99CAFF] hover:translate-x-2 transition-all" href="/resume - Jediel Victorin SAMEY.pdf" target="blank" cursor-pointer>
                         Download CV
                     </a>
                 </div>
@@ -54,7 +54,7 @@ function Navigation() {
                         Contact
                     </Link>
 
-                    <a href="/resume - Jediel Victorin SAMEY.pdf" download class="px-5 py-2 rounded-full bg-[#99CAFF] hover:bg-white hover:text-[#99CAFF] transition">
+                    <a href="/resume - Jediel Victorin SAMEY.pdf" target="blank" class="px-5 py-2 rounded-full bg-[#99CAFF] hover:bg-white hover:text-[#99CAFF] transition">
                         Download CV
                     </a>
                 </div>
