@@ -17,7 +17,7 @@ function About() {
                     <h2 class="text-xl text-white font-medium">
                         Who Am I ?
                     </h2>
-                    <p class="mt-6 leading-8 text-white/80">
+                    <p class="mt-6 leading-8 text-white">
                         I'm a Software Engineer passionate about creating impactful
                         digital solutions. Beyond coding, I enjoy building tech
                         communities, mentoring aspiring developers, and exploring

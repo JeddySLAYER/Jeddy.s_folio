@@ -84,7 +84,7 @@ function Contact() {
                     </div>
 
                     <div class="flex justify-start">
-                        <button type="submit" class="px-5 py-2 rounded-full bg-white text-[#99CAFF] font-semibold hover:bg-[#99CAFF] hover:text-white hover:border hover:border-white transition-all duration-300 cursor-pointer">
+                        <button type="submit" class="px-5 py-2 rounded-full bg-white text-[#60A5FA] font-semibold hover:bg-[#60A5FA] hover:text-white hover:border hover:border-white transition-all duration-300 cursor-pointer">
                             Send Message
                         </button>
                     </div>
@@ -92,24 +92,24 @@ function Contact() {
             </div>
 
             <div class="lg:col-span-5 flex flex-col">
-                <p class="mt-2 text-xl italic text-white/80 leading-8">
+                <p class="mt-2 text-xl italic text-white leading-8">
                     Feel free to reach out, whether you have a project in mind, a collaboration opportunity, or just want to say hello, I'm always open to connecting with passionate people.
                 </p>
 
                 <div class="flex gap-4 flex-wrap mt-6 md:mt-8">
-                    <a href="https://github.com/JeddySLAYER/" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#99CAFF] transition">
+                    <a href="https://github.com/JeddySLAYER/" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#60A5FA] transition">
                         <FaGithub size={22}/>
                     </a>
 
-                    <a href="https://wa.me/98504036" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#99CAFF] transition">
+                    <a href="https://wa.me/98504036" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#60A5FA] transition">
                         <FaWhatsapp size={22}/>
                     </a>
 
-                    <a href="https://www.instagram.com/jeddy_slayer" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#99CAFF] transition">
+                    <a href="https://www.instagram.com/jeddy_slayer" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#60A5FA] transition">
                         <FaInstagram size={22}/>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/jediel-victorin-samey-1075762b8" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#99CAFF] transition">
+                    <a href="https://www.linkedin.com/in/jediel-victorin-samey-1075762b8" target="_blank" class="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#60A5FA] transition">
                         <FaLinkedinIn size={22}/>
                     </a>
                 </div>

@@ -51,7 +51,7 @@ function Highlight() {
             <div class="flex flex-wrap gap-3 mt-8 mb-10">
                 {
                     keywords.map((keyword) => (
-                        <button key={keyword} onClick={() => setSelectedKeyword(keyword)} class={`px-5 py-2 rounded-full border transition-all duration-300 cursor-pointer ${selectedKeyword === keyword ? "bg-white text-[#99CAFF] border-white" : "bg-white/10 border-white/20 hover:bg-white/20"}`}>
+                        <button key={keyword} onClick={() => setSelectedKeyword(keyword)} class={`px-5 py-2 rounded-full border transition-all duration-300 cursor-pointer ${selectedKeyword === keyword ? "bg-white text-[#60A5FA] border-white" : "bg-white/10 border-white/20 hover:bg-white/20"}`}>
                             {keyword}
                         </button>
                     ))

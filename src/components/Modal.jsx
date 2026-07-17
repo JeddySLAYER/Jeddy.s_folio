@@ -52,7 +52,7 @@ function Modal({ highlight, onClose }) {
         <div onClick={onClose} class="fixed inset-0 z-9999 bg-black/30 backdrop-blur-sm overflow-y-auto">
             <div class="min-h-screen flex justify-center p-4 md:p-10">
                 <div onClick={(e) => e.stopPropagation()} class="relative md:w-4/5 max-w-6xl bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col">
-                    <button onClick={onClose} class="absolute top-5 right-5 z-30 w-11 h-11 rounded-full bg-black/40 hover:bg-[#99CAFF] transition flex items-center justify-center cursor-pointer">
+                    <button onClick={onClose} class="absolute top-5 right-5 z-30 w-11 h-11 rounded-full bg-black/40 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
                         <X class="text-white" size={24}/>
                     </button>
 
@@ -69,11 +69,11 @@ function Modal({ highlight, onClose }) {
                             highlight.media.length > 1 &&
 
                             <>
-                                <button  onClick={previous} class="absolute left-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#99CAFF] transition flex items-center justify-center cursor-pointer">
+                                <button  onClick={previous} class="absolute left-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
                                     <ChevronLeft class="text-white"/>
                                 </button>
 
-                                <button onClick={next} class="absolute right-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#99CAFF] transition flex items-center justify-center cursor-pointer">
+                                <button onClick={next} class="absolute right-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
                                     <ChevronRight class="text-white"/>
                                 </button>
                             </>
@@ -103,7 +103,7 @@ function Modal({ highlight, onClose }) {
                         </div>
                     }
 
-                    <div class="bg-[#99CAFF] p-8 text-white">
+                    <div class="bg-[#60A5FA] p-8 text-white">
 
                         <span class="text-sm uppercase tracking-widest text-white/60">
                             Highlight

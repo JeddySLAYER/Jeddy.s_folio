@@ -2,7 +2,7 @@ function Card({ highlight, onOpen }) {
 
     return (
         <div onClick={() => onOpen(highlight)} class="cursor-pointer group">
-            <div class="overflow-hidden rounded-3xl border-8 border-[#E3F2FF]">
+            <div class="overflow-hidden rounded-3xl border-8 border-[#60A5FA]">
                 <img
                     src={highlight.cover}
                     alt={highlight.title}
