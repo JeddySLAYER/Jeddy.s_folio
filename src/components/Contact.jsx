@@ -1,16 +1,14 @@
 import { useState } from "react";
 import {FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp} from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    email: "",
     subject: "",
     message: ""
   });
-  const [status, setStatus] = useState("idle");
-  const [feedback, setFeedback] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -19,39 +17,27 @@ function Contact() {
     });
   };
 
-  const sendEmail = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    setStatus("sending");
-    setFeedback("");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
+    emailjs.sendForm(
+        "service_a1m4ogd",
+        "template_occdv9a",
+        "#Form"
+    )
+    .then(() => {
+        alert("Message sent successfully!");
 
-      const data = await response.json().catch(() => ({}));
-
-      if (!response.ok) {
-        throw new Error(data.error || "The message could not be sent.");
-      }
-
-      setStatus("success");
-      setFeedback("Message sent successfully!");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
-    } catch (error) {
-      setStatus("error");
-      setFeedback(error.message);
-    }
+        setFormData({
+            firstName: "",
+            lastName: "",
+            subject: "",
+            message: ""
+        });
+    })
+    .catch((error) => {
+        console.error(error);
+    });
   };
 
   return (
@@ -65,7 +51,7 @@ function Contact() {
         <div className="grid lg:grid-cols-12 gap-10 mt-8">
 
             <div className="lg:col-span-7">
-                <form className="flex flex-col gap-6 flex-1" onSubmit={sendEmail}>
+                <form className="flex flex-col gap-6 flex-1" id="Form">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label className="block mb-2 font-medium">
@@ -85,13 +71,6 @@ function Contact() {
 
                     <div>
                         <label className="block mb-2 font-medium">
-                            Email
-                        </label>
-                        <input type="email" placeholder="jediel@samey.com" className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 outline-none focus:border-white transition" name="email" value={formData.email} onChange={handleChange} required/>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2 font-medium">
                             Subject
                         </label>
                         <input type="text" placeholder="Your subject..." className="w-full rounded-xl bg-white/10 border border-white/20 px-4 py-3 outline-none focus:border-white transition" name="subject" value={formData.subject} onChange={handleChange} required/>
@@ -104,15 +83,10 @@ function Contact() {
                         <textarea placeholder="Write your message..." className="flex-1 min-h-56 resize-none rounded-xl bg-white/10 border border-white/20 px-4 py-3 outline-none focus:border-white transition" name="message" value={formData.message} onChange={handleChange} required></textarea>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                        <button type="submit" disabled={status === "sending"} className="px-5 py-2 rounded-full bg-white text-[#60A5FA] font-semibold hover:bg-[#60A5FA] hover:text-white hover:border hover:border-white transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
-                            {status === "sending" ? "Sending..." : "Send Message"}
+                    <div className="flex justify-start">
+                        <button type="submit" className="px-5 py-2 rounded-full bg-white text-[#60A5FA] font-semibold hover:bg-[#60A5FA] hover:text-white hover:border hover:border-white transition-all duration-300 cursor-pointer">
+                            Send Message
                         </button>
-                        {feedback && (
-                            <p className={status === "success" ? "text-white" : "text-red-200"}>
-                                {feedback}
-                            </p>
-                        )}
                     </div>
                 </form>
             </div>
