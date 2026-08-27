@@ -3,12 +3,13 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import express from "express";
-import nodemailer from "nodemailer";
+
+import { isConfigured, parseContact, sendContactEmail } from "./mail.js";
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const envPath = path.join(root, ".env");
 
-function loadEnvFile(filePath) {
+function loadEnvFile(filePath, { override = false } = {}) {
   if (!fs.existsSync(filePath)) return;
 
   const lines = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "").split(/\r?\n/);
@@ -30,21 +31,9 @@ function loadEnvFile(filePath) {
       value = value.slice(1, -1);
     }
 
+    if (!override && process.env[key] !== undefined) continue;
     process.env[key] = value;
   }
-}
-
-function smtpPass() {
-  return (process.env.SMTP_PASS || "").replaceAll(" ", "");
-}
-
-function isConfigured() {
-  return Boolean(
-    process.env.SMTP_HOST &&
-    process.env.SMTP_USER &&
-    smtpPass() &&
-    process.env.CONTACT_TO
-  );
 }
 
 loadEnvFile(envPath);
@@ -54,16 +43,7 @@ const port = Number(process.env.PORT || 3001);
 
 app.use(express.json({ limit: "20kb" }));
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const hits = new Map();
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
 
 function tooManyRequests(ip) {
   const now = Date.now();
@@ -80,13 +60,10 @@ function tooManyRequests(ip) {
   return false;
 }
 
-function readField(value, maxLength) {
-  if (typeof value !== "string") return "";
-  return value.trim().slice(0, maxLength);
-}
-
 app.post("/api/contact", async (req, res) => {
-  loadEnvFile(envPath);
+  if (process.env.NODE_ENV !== "production") {
+    loadEnvFile(envPath, { override: true });
+  }
 
   if (!isConfigured()) {
     return res.status(503).json({ error: "Contact form is not configured yet." });
@@ -97,53 +74,13 @@ app.post("/api/contact", async (req, res) => {
     return res.status(429).json({ error: "Too many messages. Please try again later." });
   }
 
-  const firstName = readField(req.body?.firstName, 80);
-  const lastName = readField(req.body?.lastName, 80);
-  const email = readField(req.body?.email, 120);
-  const subject = readField(req.body?.subject, 200);
-  const message = readField(req.body?.message, 5000);
-
-  if (!firstName || !email || !subject || !message) {
-    return res.status(400).json({ error: "Please fill in all required fields." });
+  const parsed = parseContact(req.body);
+  if (parsed.error) {
+    return res.status(400).json({ error: parsed.error });
   }
-
-  if (!emailPattern.test(email)) {
-    return res.status(400).json({ error: "Please enter a valid email address." });
-  }
-
-  const fullName = [firstName, lastName].filter(Boolean).join(" ");
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: process.env.SMTP_SECURE === "true",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: smtpPass(),
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"Portfolio" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_TO,
-      replyTo: email,
-      subject: `[Portfolio] ${subject}`,
-      text: [
-        `Name: ${fullName}`,
-        `Email: ${email}`,
-        `Subject: ${subject}`,
-        "",
-        message,
-      ].join("\n"),
-      html: `
-        <p><strong>Name:</strong> ${escapeHtml(fullName)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-        <p>${escapeHtml(message).replaceAll("\n", "<br />")}</p>
-      `,
-    });
-
+    await sendContactEmail(parsed.data);
     return res.json({ ok: true });
   } catch (error) {
     console.error("Failed to send contact email:", error.message);
@@ -166,7 +103,7 @@ if (fs.existsSync(dist)) {
   });
 }
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Contact API listening on http://localhost:${port}`);
   if (isConfigured()) {
     console.log("SMTP is configured.");
