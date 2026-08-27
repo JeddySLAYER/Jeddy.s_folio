@@ -1,5 +1,3 @@
-import { div } from "framer-motion/client";
-
 export const highlights = [
 
     {
@@ -21,60 +19,60 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/TCR 2026/0.jpg",
+        cover: "/highlights/TCR 2026/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/TCR 2026/0.jpg"
+                src: "/highlights/TCR 2026/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/1.jpg"
+                src: "/highlights/TCR 2026/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/2.jpg"
+                src: "/highlights/TCR 2026/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/3.jpg"
+                src: "/highlights/TCR 2026/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/4.jpg"
+                src: "/highlights/TCR 2026/4.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/5.jpg"
+                src: "/highlights/TCR 2026/5.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/6.jpg"
+                src: "/highlights/TCR 2026/6.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/7.jpg"
+                src: "/highlights/TCR 2026/7.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/8.jpg"
+                src: "/highlights/TCR 2026/8.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/9.jpg"
+                src: "/highlights/TCR 2026/9.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/10.jpg"
+                src: "/highlights/TCR 2026/10.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/11.jpg"
+                src: "/highlights/TCR 2026/11.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2026/12.jpg"
+                src: "/highlights/TCR 2026/12.webp"
             },
         ],
 
@@ -85,7 +83,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 2,
 
         title: "AI4YOUTH 2025",
 
@@ -105,24 +103,24 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/AI4YOUTH/0.jpeg",
+        cover: "/highlights/AI4YOUTH/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/AI4YOUTH/0.jpeg"
+                src: "/highlights/AI4YOUTH/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/AI4YOUTH/1.png"
+                src: "/highlights/AI4YOUTH/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/AI4YOUTH/2.png"
+                src: "/highlights/AI4YOUTH/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/AI4YOUTH/3.png"
+                src: "/highlights/AI4YOUTH/3.webp"
             }
         ],
 
@@ -133,7 +131,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 3,
 
         title: "Tech Campus Clubs IAI-TOGO - Campus Lead",
 
@@ -154,7 +152,7 @@ export const highlights = [
                 <br />
                 <p>
                     Discover who we are and what we do
-                    <a href="https://tcc.hyver.org/c/institut-africain-dinformatiqueiai-togo" class="border-b-2 font-bold m-1">
+                    <a href="https://tcc.hyver.org/c/institut-africain-dinformatiqueiai-togo" className="border-b-2 font-bold m-1">
                         HERE 
                     </a>
                     <br />
@@ -163,36 +161,36 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/TCC/0.png",
+        cover: "/highlights/TCC/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/TCC/0.png"
+                src: "/highlights/TCC/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCC/1.png"
+                src: "/highlights/TCC/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCC/2.png"
+                src: "/highlights/TCC/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCC/3.png"
+                src: "/highlights/TCC/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCC/4.png"
+                src: "/highlights/TCC/4.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCC/5.png"
+                src: "/highlights/TCC/5.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCC/6.jpeg"
+                src: "/highlights/TCC/6.webp"
             },
         ],
 
@@ -203,7 +201,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 4,
 
         title: "Miadô, an AI-Powered Local Services Platform",
 
@@ -218,19 +216,19 @@ export const highlights = [
                 <br />
                 <p>
                     Learn more about Miadô
-                    <a href="/Miado - Djanta - EN.pdf" target="blank" class="border-b-2 font-bold m-1">
+                    <a href="/Miado - Djanta - EN.pdf" target="_blank" rel="noopener noreferrer" className="border-b-2 font-bold m-1">
                         HERE 
                     </a>
                 </p>
             </>
         ),
 
-        cover: "/highlights/Miadô/0.png",
+        cover: "/highlights/Miadô/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/Miadô/0.png"
+                src: "/highlights/Miadô/0.webp"
             }
         ],
 
@@ -240,7 +238,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 5,
 
         title: "Black Python Devs Ambassador",
 
@@ -255,19 +253,19 @@ export const highlights = [
                 <br />
                 <p>
                     Discover Black Python Devs
-                    <a href="https://blackpythondevs.com/" target="blank" class="border-b-2 font-bold m-1">
+                    <a href="https://blackpythondevs.com/" target="_blank" rel="noopener noreferrer" className="border-b-2 font-bold m-1">
                         HERE 
                     </a>
                 </p>
             </>
         ),
 
-        cover: "/highlights/BPD/0.png",
+        cover: "/highlights/BPD/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/BPD/0.png"
+                src: "/highlights/BPD/0.webp"
             }
         ],
 
@@ -278,7 +276,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 6,
 
         title: "MIABE HACKATHON 2025",
 
@@ -298,36 +296,36 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/MIABE HACKATHON/0.png",
+        cover: "/highlights/MIABE HACKATHON/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/MIABE HACKATHON/0.png"
+                src: "/highlights/MIABE HACKATHON/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/MIABE HACKATHON/1.png"
+                src: "/highlights/MIABE HACKATHON/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/MIABE HACKATHON/2.png"
+                src: "/highlights/MIABE HACKATHON/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/MIABE HACKATHON/3.png"
+                src: "/highlights/MIABE HACKATHON/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/MIABE HACKATHON/4.png"
+                src: "/highlights/MIABE HACKATHON/4.webp"
             },
             {
                 type: "image",
-                src: "/highlights/MIABE HACKATHON/5.png"
+                src: "/highlights/MIABE HACKATHON/5.webp"
             },
             {
                 type: "image",
-                src: "/highlights/MIABE HACKATHON/6.png"
+                src: "/highlights/MIABE HACKATHON/6.webp"
             },
         ],
 
@@ -338,7 +336,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 7,
 
         title: "PyCon Togo 2025",
 
@@ -356,51 +354,51 @@ export const highlights = [
                 <br />
                 <p>
                     Learn More about the best
-                    <a href="https://pycon.pytogo.org/tickets" target="blank" class="border-b-2 font-bold m-1">
+                    <a href="https://pycon.pytogo.org/tickets" target="_blank" rel="noopener noreferrer" className="border-b-2 font-bold m-1">
                         Python Community in Togo 
                     </a>
                 </p>
             </>
         ),
 
-        cover: "/highlights/PyCon 2025/0.jpg",
+        cover: "/highlights/PyCon 2025/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/0.jpg"
+                src: "/highlights/PyCon 2025/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/1.jpg"
+                src: "/highlights/PyCon 2025/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/2.jpg"
+                src: "/highlights/PyCon 2025/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/3.jpg"
+                src: "/highlights/PyCon 2025/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/4.jpg"
+                src: "/highlights/PyCon 2025/4.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/5.jpg"
+                src: "/highlights/PyCon 2025/5.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/6.jpg"
+                src: "/highlights/PyCon 2025/6.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/7.jpg"
+                src: "/highlights/PyCon 2025/7.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2025/8.jpg"
+                src: "/highlights/PyCon 2025/8.webp"
             }
         ],
         
@@ -411,7 +409,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 8,
 
         title: "DevFest Lomé 2025",
 
@@ -429,36 +427,36 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/DevFest 2025/0.jpg",
+        cover: "/highlights/DevFest 2025/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/DevFest 2025/0.jpg"
+                src: "/highlights/DevFest 2025/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/DevFest 2025/1.jpg"
+                src: "/highlights/DevFest 2025/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/DevFest 2025/2.jpg"
+                src: "/highlights/DevFest 2025/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/DevFest 2025/3.jpg"
+                src: "/highlights/DevFest 2025/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/DevFest 2025/4.jpg"
+                src: "/highlights/DevFest 2025/4.webp"
             },
             {
                 type: "image",
-                src: "/highlights/DevFest 2025/5.jpg"
+                src: "/highlights/DevFest 2025/5.webp"
             },
             {
                 type: "image",
-                src: "/highlights/DevFest 2025/6.jpg"
+                src: "/highlights/DevFest 2025/6.webp"
             }
         ],
 
@@ -469,7 +467,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 9,
 
         title: "Togo Code Run 2025",
 
@@ -487,28 +485,28 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/TCR 2025/0.JPG",
+        cover: "/highlights/TCR 2025/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/TCR 2025/0.JPG"
+                src: "/highlights/TCR 2025/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2025/1.jpg"
+                src: "/highlights/TCR 2025/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2025/2.jpg"
+                src: "/highlights/TCR 2025/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2025/3.jpg"
+                src: "/highlights/TCR 2025/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TCR 2025/4.jpg"
+                src: "/highlights/TCR 2025/4.webp"
             }
         ],
 
@@ -520,7 +518,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 10,
 
         title: "Campus Tour ESCEN",
 
@@ -536,28 +534,28 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/Campus Tour ESCEN/0.JPG",
+        cover: "/highlights/Campus Tour ESCEN/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/Campus Tour ESCEN/0.JPG"
+                src: "/highlights/Campus Tour ESCEN/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour ESCEN/1.JPG"
+                src: "/highlights/Campus Tour ESCEN/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour ESCEN/2.jpg"
+                src: "/highlights/Campus Tour ESCEN/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour ESCEN/3.jpg"
+                src: "/highlights/Campus Tour ESCEN/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour ESCEN/4.jpg"
+                src: "/highlights/Campus Tour ESCEN/4.webp"
             }
         ],
 
@@ -569,7 +567,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 11,
 
         title: "Campus Tour EPL - fata Challenge",
 
@@ -589,44 +587,44 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/Campus Tour EPL/0.JPG",
+        cover: "/highlights/Campus Tour EPL/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/0.JPG"
+                src: "/highlights/Campus Tour EPL/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/1.JPG"
+                src: "/highlights/Campus Tour EPL/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/2.JPG"
+                src: "/highlights/Campus Tour EPL/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/3.JPG"
+                src: "/highlights/Campus Tour EPL/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/4.JPG"
+                src: "/highlights/Campus Tour EPL/4.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/5.JPG"
+                src: "/highlights/Campus Tour EPL/5.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/6.JPG"
+                src: "/highlights/Campus Tour EPL/6.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/7.JPG"
+                src: "/highlights/Campus Tour EPL/7.webp"
             },
             {
                 type: "image",
-                src: "/highlights/Campus Tour EPL/8.JPG"
+                src: "/highlights/Campus Tour EPL/8.webp"
             }
         ],
 
@@ -638,7 +636,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 12,
 
         title: "UpComing PyCon Togo 2026",
 
@@ -656,7 +654,7 @@ export const highlights = [
                 <br />
                 <p>
                     Get your
-                    <a href="https://pycon.pytogo.org/tickets" target="blank" class="border-b-2 font-bold m-1">
+                    <a href="https://pycon.pytogo.org/tickets" target="_blank" rel="noopener noreferrer" className="border-b-2 font-bold m-1">
                         TICKET
                     </a>
                     and let's meet there
@@ -664,24 +662,24 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/PyCon 2026/0.png",
+        cover: "/highlights/PyCon 2026/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/PyCon 2026/0.png"
+                src: "/highlights/PyCon 2026/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2026/1.png"
+                src: "/highlights/PyCon 2026/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2026/2.png"
+                src: "/highlights/PyCon 2026/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/PyCon 2026/3.png"
+                src: "/highlights/PyCon 2026/3.webp"
             }
         ],
 
@@ -692,7 +690,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 13,
 
         title: "Programming Club - IAI-TOGO",
 
@@ -700,11 +698,11 @@ export const highlights = [
             <>
                 <p>
                     For two years, I had the privilege of serving in the leadership of my university's Programming Club. I first worked alongside President
-                    <a href="https://www.linkedin.com/in/fadilix/" target="blank" class="font-bold m-1">
+                    <a href="https://www.linkedin.com/in/fadilix/" target="_blank" rel="noopener noreferrer" className="font-bold m-1">
                         Fadilou MOROU
                     </a>
                     and Vice President
-                    <a href="https://www.linkedin.com/in/irin-banakinao-86640b21a/" target="blank" class="font-bold m-1">
+                    <a href="https://www.linkedin.com/in/irin-banakinao-86640b21a/" target="_blank" rel="noopener noreferrer" className="font-bold m-1">
                         Irin Banakinao
                     </a>
                     as part of the executive team before later being elected President. This progression gave me the opportunity to learn from experienced student leaders before taking responsibility for the club's vision, activities, and growth.
@@ -721,20 +719,20 @@ export const highlights = [
             </>
         ),
 
-        cover: "/highlights/club de programmation/0.png",
+        cover: "/highlights/club de programmation/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/club de programmation/0.png"
+                src: "/highlights/club de programmation/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/club de programmation/1.png"
+                src: "/highlights/club de programmation/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/club de programmation/2.png"
+                src: "/highlights/club de programmation/2.webp"
             }
         ],
 
@@ -744,7 +742,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 14,
 
         title: "Competitive Programming - IAI-TOGO",
 
@@ -762,35 +760,35 @@ export const highlights = [
                 <br />
                 <p>
                     Little recap
-                    <a href="https://www.linkedin.com/posts/jediel-victorin-samey-1075762b8_promouvoir-le-num%C3%A9rique-et-soutenir-les-initiatives-activity-7409657725745418241-6wlw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAExCHBcB_veI6Fi9r-QDazTOSI3ayxwZRQw" target="blank" class="border-b-2 font-bold m-1">
+                    <a href="https://www.linkedin.com/posts/jediel-victorin-samey-1075762b8_promouvoir-le-num%C3%A9rique-et-soutenir-les-initiatives-activity-7409657725745418241-6wlw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAExCHBcB_veI6Fi9r-QDazTOSI3ayxwZRQw" target="_blank" rel="noopener noreferrer" className="border-b-2 font-bold m-1">
                         HERE
                     </a>
                 </p>
             </>
         ),
 
-        cover: "/highlights/competitive programming/0.jpeg",
+        cover: "/highlights/competitive programming/0.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/competitive programming/0.jpeg"
+                src: "/highlights/competitive programming/0.webp"
             },
             {
                 type: "image",
-                src: "/highlights/competitive programming/1.jpeg"
+                src: "/highlights/competitive programming/1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/competitive programming/2.jpeg"
+                src: "/highlights/competitive programming/2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/competitive programming/3.jpeg"
+                src: "/highlights/competitive programming/3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/competitive programming/4.jpeg"
+                src: "/highlights/competitive programming/4.webp"
             }
         ],
 
@@ -800,7 +798,7 @@ export const highlights = [
     },
 
     {
-        id: 1,
+        id: 15,
 
         title: "Tech Savvy Summit 2.0",
 
@@ -815,39 +813,39 @@ export const highlights = [
                 <br />
                 <p>
                     Join Us to Build Africa's Tommorrow at 
-                    <a href="https://forge4africa.com/" class="border-b-2 font-bold m-1">
+                    <a href="https://forge4africa.com/" className="border-b-2 font-bold m-1">
                         FORGE4AFRICA
                     </a>
                 </p>
             </>
         ),
 
-        cover: "/highlights/TSS/tss1.jpeg",
+        cover: "/highlights/TSS/tss1.webp",
 
         media: [
             {
                 type: "image",
-                src: "/highlights/TSS/tss1.jpeg"
+                src: "/highlights/TSS/tss1.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TSS/tss2.jpg"
+                src: "/highlights/TSS/tss2.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TSS/tss3.jpeg"
+                src: "/highlights/TSS/tss3.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TSS/tss4.jpeg"
+                src: "/highlights/TSS/tss4.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TSS/tss5.jpeg"
+                src: "/highlights/TSS/tss5.webp"
             },
             {
                 type: "image",
-                src: "/highlights/TSS/tss6.png"
+                src: "/highlights/TSS/tss6.webp"
             }
         ],
 

@@ -28,6 +28,29 @@ function Modal({ highlight, onClose }) {
 
     });
 
+    useEffect(() => {
+        const html = document.documentElement;
+        const body = document.body;
+        const previous = {
+            htmlOverflow: html.style.overflow,
+            htmlOverscroll: html.style.overscrollBehavior,
+            bodyOverflow: body.style.overflow,
+            bodyOverscroll: body.style.overscrollBehavior,
+        };
+
+        html.style.overflow = "hidden";
+        body.style.overflow = "hidden";
+        html.style.overscrollBehavior = "none";
+        body.style.overscrollBehavior = "none";
+
+        return () => {
+            html.style.overflow = previous.htmlOverflow;
+            html.style.overscrollBehavior = previous.htmlOverscroll;
+            body.style.overflow = previous.bodyOverflow;
+            body.style.overscrollBehavior = previous.bodyOverscroll;
+        };
+    }, []);
+
     if (!highlight) return null;
 
     const previous = () => {
@@ -49,32 +72,32 @@ function Modal({ highlight, onClose }) {
     const media = highlight.media[current];
 
     return createPortal(
-        <div onClick={onClose} class="fixed inset-0 z-9999 bg-black/30 backdrop-blur-sm overflow-y-auto">
-            <div class="min-h-screen flex justify-center p-4 md:p-10">
-                <div onClick={(e) => e.stopPropagation()} class="relative md:w-4/5 max-w-6xl bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col">
-                    <button onClick={onClose} class="absolute top-5 right-5 z-30 w-11 h-11 rounded-full bg-black/40 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
-                        <X class="text-white" size={24}/>
+        <div onClick={onClose} className="fixed inset-0 z-9999 bg-black/30 backdrop-blur-sm overflow-y-auto overscroll-contain">
+            <div className="min-h-screen flex justify-center p-4 md:p-10">
+                <div onClick={(e) => e.stopPropagation()} className="relative md:w-4/5 max-w-6xl bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 shadow-2xl flex flex-col">
+                    <button onClick={onClose} className="absolute top-5 right-5 z-30 w-11 h-11 rounded-full bg-black/40 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
+                        <X className="text-white" size={24}/>
                     </button>
 
-                    <div class="relative h-72 md:h-96 flex items-center justify-center">
+                    <div className="relative h-72 md:h-96 flex items-center justify-center">
                         {
                             media.type === "image"
                                 ?
-                                <img src={media.src} alt="" class="w-full h-full object-contain"/>
+                                <img src={media.src} alt="" className="w-full h-full object-contain"/>
                                 :
-                                <video src={media.src} controls class="w-full h-full object-contain"/>
+                                <video src={media.src} controls className="w-full h-full object-contain"/>
                         }
 
                         {
                             highlight.media.length > 1 &&
 
                             <>
-                                <button  onClick={previous} class="absolute left-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
-                                    <ChevronLeft class="text-white"/>
+                                <button  onClick={previous} className="absolute left-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
+                                    <ChevronLeft className="text-white"/>
                                 </button>
 
-                                <button onClick={next} class="absolute right-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
-                                    <ChevronRight class="text-white"/>
+                                <button onClick={next} className="absolute right-5 w-12 h-12 rounded-full bg-black/50 hover:bg-[#60A5FA] transition flex items-center justify-center cursor-pointer">
+                                    <ChevronRight className="text-white"/>
                                 </button>
                             </>
                         }
@@ -85,17 +108,17 @@ function Modal({ highlight, onClose }) {
 
                         highlight.media.length > 1 &&
 
-                        <div class="flex gap-3 overflow-x-auto px-6 py-5 bg-black/20">
+                        <div className="flex gap-3 overflow-x-auto px-6 py-5 bg-black/20">
                             {
                                 highlight.media.map((item, index) => (
 
-                                    <button key={index} onClick={() => setCurrent(index)} class={`shrink-0 rounded-xl overflow-hidden border-2 transition ${current === index ? "border-white" : "border-transparent"}`}>
+                                    <button key={index} onClick={() => setCurrent(index)} className={`shrink-0 rounded-xl overflow-hidden border-2 transition ${current === index ? "border-white" : "border-transparent"}`}>
                                         {
                                             item.type === "image"
                                                 ?
-                                                <img src={item.src} class="w-24 h-16 object-cover"/>
+                                                <img src={item.src} className="w-24 h-16 object-cover"/>
                                                 :
-                                                <video src={item.src} class="w-24 h-16 object-cover"/>
+                                                <video src={item.src} className="w-24 h-16 object-cover"/>
                                         }
                                     </button>
                                 ))
@@ -103,17 +126,17 @@ function Modal({ highlight, onClose }) {
                         </div>
                     }
 
-                    <div class="bg-[#60A5FA] p-8 text-white">
+                    <div className="bg-[#60A5FA] p-8 text-white">
 
-                        <span class="text-sm uppercase tracking-widest text-white/60">
+                        <span className="text-sm uppercase tracking-widest text-white/60">
                             Highlight
                         </span>
 
-                        <h2 class="text-3xl font-bold mt-2">
+                        <h2 className="text-3xl font-bold mt-2">
                             {highlight.title}
                         </h2>
 
-                        <p class="mt-6 leading-8 text-white/80">
+                        <p className="mt-6 leading-8 text-white/80">
                             {highlight.description}
                         </p>
                     </div>

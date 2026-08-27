@@ -37,28 +37,28 @@ function Highlight() {
     }, [selectedKeyword]);
 
     return (
-        <div class="w-full h-full flex flex-col text-white">
+        <div className="w-full h-full flex flex-col text-white">
             <div>
-                <h1 class="text-2xl font-bold">
+                <h1 className="text-2xl font-bold">
                     Highlights
                 </h1>
 
-                <p class="mt-3 text-xl italic text-white/80">
+                <p className="mt-3 text-xl italic text-white/80">
                     Some of the most memorable moments of my journey.
                 </p>
             </div>
 
-            <div class="flex flex-wrap gap-3 mt-8 mb-10">
+            <div className="flex flex-wrap gap-3 mt-8 mb-10">
                 {
                     keywords.map((keyword) => (
-                        <button key={keyword} onClick={() => setSelectedKeyword(keyword)} class={`px-5 py-2 rounded-full border transition-all duration-300 cursor-pointer ${selectedKeyword === keyword ? "bg-white text-[#60A5FA] border-white" : "bg-white/10 border-white/20 hover:bg-white/20"}`}>
+                        <button key={keyword} onClick={() => setSelectedKeyword(keyword)} className={`px-5 py-2 rounded-full border transition-all duration-300 cursor-pointer ${selectedKeyword === keyword ? "bg-white text-[#60A5FA] border-white" : "bg-white/10 border-white/20 hover:bg-white/20"}`}>
                             {keyword}
                         </button>
                     ))
                 }
             </div>
 
-            <div class="flex-1 overflow-y-auto pr-2">
+            <div className={`flex-1 pr-2 ${selectedHighlight ? "overflow-hidden" : "overflow-y-auto"}`}>
                 <Grid
                     highlights={filteredHighlights}
                     onOpen={setSelectedHighlight}
